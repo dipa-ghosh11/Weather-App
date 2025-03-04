@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import WeatherMain from './components/WeatherMain';
 
 function App() {

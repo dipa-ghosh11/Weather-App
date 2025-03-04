@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import WeatherCards from './WeatherCards';
 
 const WeatherMain = ({ location, data, setLocation, setSearchLocation, getCurrentLocation }) => {
+
   return (
       <motion.div
           className="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden"
@@ -29,7 +30,7 @@ const WeatherMain = ({ location, data, setLocation, setSearchLocation, getCurren
                   <TiAdjustBrightness className='inline w-6 md:w-8 text-blue-400 ml-1' />
               </motion.h1>
 
-             <motion.div
+              <motion.div
                   className="flex flex-row items-center gap-3 mb-4"
               >
                   <motion.div
@@ -51,7 +52,7 @@ const WeatherMain = ({ location, data, setLocation, setSearchLocation, getCurren
                           }}
                       />
                   </motion.div>
-                  <button 
+                  <button
                       className="bg-blue-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full hover:bg-blue-700 transition-colors whitespace-nowrap text-sm md:text-base flex items-center gap-2"
                       onClick={getCurrentLocation}
                   >
@@ -67,8 +68,8 @@ const WeatherMain = ({ location, data, setLocation, setSearchLocation, getCurren
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
                   >
-                      <p className='font-light text-gray-300 text-center text-sm md:text-base'>Today's weather in <span className="text-white text-base md:text-lg ml-1">{data.name + ", " + data.region + ", " + data.country}</span></p>
-                      <motion.div className='flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mt-3 md:mt-4' 
+                      <p className='font-light text-gray-300 text-center text-sm md:text-base'>Today's weather in <span className="text-purple-400 text-base md:text-lg ml-1">{data.name + ", " + data.region + ", " + data.country}</span></p>
+                      <motion.div className='flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mt-3 md:mt-4'
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6 }}>
